@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ToDoList</title>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="dolist.css">
+    
+    </head>
+    <body>
+        <div id="myDiv" class="header">
+            <h2>My To Do List</h2>
+            <input type="text" id="myInput" placeholder="title" onkeypress="handle(event)">
+            <span onclick="newElement()" class="addBtn">Add</span></br>
+            <div id="myDiv2">
+            <button onclick="unchecked()" class="uncheckedBtn">Unchecked</button>
+            <button onclick="checked()" class="checkedBtn">Checked</button>
+            <button onclick="alll()" class="allBtn">ALL</button>
+            </div>
+            </div>
+        <ul id="myUL">
+            <li>Hit the gym</li>    
+            <li class="checked">Pay bills</li>
+            <li class="checked">meet riya</li>
+            <li>Buy eggs</li>
+            <li class="checked">read a books</li>
+            <li>organize office</li>
+            </ul>
+            
+            <script>
+            function handle(ev){
+                if(ev.keyCode == 13){
+                    ev.preventDefault();
+                    newElement();
+                }
+            }
+            </script>
+            <script src="dolist.js"></script>
+    
+    
+      </body>
+      </html>      
